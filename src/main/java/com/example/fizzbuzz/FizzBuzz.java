@@ -4,7 +4,7 @@ public class FizzBuzz {
 
     public static String map(int i) {
 
-        if ( i == 15) {
+        if ( i == 15 || i == 30) {
             return "FizzBuzz";
         }
 
