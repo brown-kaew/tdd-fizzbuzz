@@ -41,7 +41,13 @@ class FizzBuzzTest {
         Assertions.assertEquals("Buzz", res);
     }
 
+    @Test
+    void map_input15_shouldGetFizzBuzz() {
 
+        String res = FizzBuzz.map(15);
+
+        Assertions.assertEquals("FizzBuzz", res);
+    }
 
 
 
