@@ -1,43 +1,27 @@
 package com.example.fizzbuzz;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class FizzBuzzTest {
 
-    @Test
-    void map_input1_shouldGet1() {
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 4})
+    void map_input1_shouldGet1(int i) {
 
-        String res = FizzBuzz.map(1);
+        String res = FizzBuzz.map(i);
 
-        Assertions.assertEquals("1", res);
+        Assertions.assertEquals("" + i, res);
     }
 
-    @Test
-    void map_input2_shouldGet2() {
-
-        String res = FizzBuzz.map(2);
-
-        Assertions.assertEquals("2", res);
-    }
     @Test
     void map_input3_shouldGetFizz() {
 
         String res = FizzBuzz.map(3);
 
         Assertions.assertEquals("Fizz", res);
-    }
-
-
-
-    @Test
-    void map_input4_shouldGet4() {
-
-        String res = FizzBuzz.map(4);
-
-        Assertions.assertEquals("4", res);
     }
 
     @Test
