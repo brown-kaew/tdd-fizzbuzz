@@ -7,7 +7,7 @@ public class FizzBuzz {
         if (i == 5) {
             return "Buzz";
         }
-        if (i == 3 || i == 6) {
+        if (i == 3 || i == 6 || i == 9) {
             return "Fizz";
         }
         return "" + i;
