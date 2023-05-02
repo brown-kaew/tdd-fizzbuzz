@@ -4,16 +4,28 @@ public class FizzBuzz {
 
     public static String map(int i) {
 
-        if ( i == 15 || i == 30) {
+        if (isFizzBuzz(i)) {
             return "FizzBuzz";
         }
 
-        if (i % 5 == 0) {
+        if (isBuzz(i)) {
             return "Buzz";
         }
-        if (i % 3 == 0) {
+        if (isFizz(i)) {
             return "Fizz";
         }
         return "" + i;
+    }
+
+    private static boolean isFizzBuzz(int i) {
+        return isFizz(i) && isBuzz(i);
+    }
+
+    private static boolean isBuzz(int i) {
+        return i % 5 == 0;
+    }
+
+    private static boolean isFizz(int i) {
+        return i % 3 == 0;
     }
 }
