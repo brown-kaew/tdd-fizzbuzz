@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 class FizzBuzzTest {
 
     @ParameterizedTest
-    @ValueSource(ints = {1, 2, 4})
+    @ValueSource(ints = {1, 2, 4, 7, 8})
     void map_input1_shouldGet1(int i) {
 
         String res = FizzBuzz.map(i);
@@ -36,6 +36,14 @@ class FizzBuzzTest {
     void map_input6_shouldGetFizz() {
 
         String res = FizzBuzz.map(6);
+
+        Assertions.assertEquals("Fizz", res);
+    }
+
+    @Test
+    void map_input9_shouldGetFizz() {
+
+        String res = FizzBuzz.map(9);
 
         Assertions.assertEquals("Fizz", res);
     }
