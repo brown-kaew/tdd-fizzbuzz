@@ -9,17 +9,18 @@ class FizzBuzzTest {
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 4, 7, 8})
-    void map_input1_shouldGet1(int i) {
+    void map_inputNonFizzBuzzNum_shouldGetNum(int i) {
 
         String res = FizzBuzz.map(i);
 
         Assertions.assertEquals("" + i, res);
     }
 
-    @Test
-    void map_input3_shouldGetFizz() {
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 9})
+    void map_inputFizzNum_shouldGetFizz(int i) {
 
-        String res = FizzBuzz.map(3);
+        String res = FizzBuzz.map(i);
 
         Assertions.assertEquals("Fizz", res);
     }
@@ -32,21 +33,7 @@ class FizzBuzzTest {
         Assertions.assertEquals("Buzz", res);
     }
 
-    @Test
-    void map_input6_shouldGetFizz() {
 
-        String res = FizzBuzz.map(6);
-
-        Assertions.assertEquals("Fizz", res);
-    }
-
-    @Test
-    void map_input9_shouldGetFizz() {
-
-        String res = FizzBuzz.map(9);
-
-        Assertions.assertEquals("Fizz", res);
-    }
 
 
 
