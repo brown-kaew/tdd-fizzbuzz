@@ -23,11 +23,21 @@ class FizzBuzzTest {
         Assertions.assertEquals("2", res);
     }
     @Test
-    void map_inputFizz_shouldGetFizz() {
+    void map_input3_shouldGetFizz() {
 
         String res = FizzBuzz.map(3);
 
         Assertions.assertEquals("Fizz", res);
+    }
+
+
+
+    @Test
+    void map_input4_shouldGet4() {
+
+        String res = FizzBuzz.map(4);
+
+        Assertions.assertEquals("4", res);
     }
 
 
